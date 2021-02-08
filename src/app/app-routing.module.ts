@@ -10,6 +10,11 @@ import { MiseStakingComponent } from './dashboard/mise-staking/mise-staking.comp
 import { TransactionHistoryComponent } from './dashboard/transaction-history/transaction-history.component';
 import { RefundHistoryComponent } from './dashboard/refund-history/refund-history.component';
 
+import { GraphComponent } from './tokenstats/graph/graph.component';
+import { StakingComponent } from './tokenstats/staking/staking.component';
+
+
+
 const routes: Routes = [
   {path: '',component:HomeComponent},
   {path:'reservation',component:ReservationComponent},
@@ -19,7 +24,10 @@ const routes: Routes = [
     {path:'transaction_refund', component:TransactionHistoryComponent},
     {path : 'refund_history',component:RefundHistoryComponent}
   ]},
-  {path:'tokenstats',component:TokenstatsComponent},
+  {path:'tokenstats',component:TokenstatsComponent, children:[
+    {path:'staking', component:StakingComponent},
+    {path:'graph',component:GraphComponent}
+  ]},
   {path:'tokeninfo',component:TokeninfoComponent}
   
 ];

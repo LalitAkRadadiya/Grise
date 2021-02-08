@@ -36,3 +36,8 @@
       height:800px;
     }
   }
+  .col-sm-3, .col-sm-9{
+  @media (max-width: 768px){
+    max-width:100%;
+   }
+}

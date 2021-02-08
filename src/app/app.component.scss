@@ -184,3 +184,9 @@
     .sidenav a {font-size: 18px;}
   }  
 }
+.router_outlet{
+  width: 90%;
+  @media (max-width:768px) {
+    width: 100%;
+  }
+}
